@@ -1,6 +1,6 @@
 ---
 # Amazon region where the resources will be provisioned.
-aws_region: us-west-2
+aws_region: us-east1-1
 
 # Name of the keypair for ssh connection to the ec2 instances.
 aws_keypair: aws-provision
