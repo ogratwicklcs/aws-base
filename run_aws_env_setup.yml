@@ -5,9 +5,5 @@
     - amazon.aws
   hosts: localhost
   tasks:
-  #- name: Gather information about all availability zones
-    - amazon.aws.ec2_vpc_subnet_info:
-        region: us-east-1
-    
-    # - include_role:
-    #     name: aws_role
+    - include_role:
+        name: aws_role
