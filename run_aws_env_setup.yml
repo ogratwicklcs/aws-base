@@ -6,7 +6,7 @@
   vars:
     aws_keypair: aws-keypair
     aws_region: us-east-1
-    aws_ec2_ami: ami-098f16afa9edf40be
+    aws_ec2_ami: ami-098f16afa9edf40be  
     create_ec2: true
     aws_rds_port: 5432
     aws_rds_dbtype: postgres
