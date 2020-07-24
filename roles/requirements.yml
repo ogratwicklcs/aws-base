@@ -1,5 +1,5 @@
 ---
-collections:
+roles:
   - name: amazon.aws
     version: 0.1.1
-    source: https://github.com/ansible-collections/amazon.aws.git
+
