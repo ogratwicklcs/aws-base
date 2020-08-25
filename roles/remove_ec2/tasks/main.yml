@@ -9,8 +9,9 @@
       "tag:Name": application
   register: instances_output
 
-- debug:
-    msg: "{{ instances_output }}"
+- copy:
+    content: "{{ instanes_output }}"
+    dest: /home/ansibleadm/output.json
 
 # - name: debug out of instances
 #   debug:
