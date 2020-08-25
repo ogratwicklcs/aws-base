@@ -21,7 +21,9 @@
 - debug:
     msg: "{{ instances_output.instances[0].instance_id }}"
 
-
+- debug:
+    msg: "{{ item.instance_id }}"
+  loop: "{{ instances_output.instances }}" 
 
   # - name: Terminate EC-2 instances
     #   ec2: 
