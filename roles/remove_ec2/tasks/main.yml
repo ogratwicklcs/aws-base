@@ -10,7 +10,7 @@
   register: instances_output
 - name: debug out of instances
   debug:
-    msg: "{{ instances_output.instances.imagine_id }}" 
+    msg: "{{ instances_output.instances }}" 
   
 # - name: Print phone records
 #   debug:
