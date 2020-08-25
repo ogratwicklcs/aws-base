@@ -10,7 +10,7 @@
   register: instances_output
 
 - copy:
-    content: "{{ instanes_output }}"
+    content: "{{ instances_output }}"
     dest: /home/ansibleadm/output.json
 
 # - name: debug out of instances
