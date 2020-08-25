@@ -10,22 +10,12 @@
   register: instances_output
   delegate_to: localhost
 
-# - copy:
-#     content: "{{ instances_output }}"
-#     dest: /home/ansibleadm/output.json
+# - debug:
+#     msg: "{{ item.instance_id }}"
+#   loop: "{{ instances_output.instances }}" 
 
-# - name: debug out of instances
-#   debug:
-#     msg: "{{ item.instances.value.instance_id }}" 
-#   loop: "{{ lookup('dict', instances_output) }}"
-- debug:
-    msg: "{{ instances_output.instances[0].instance_id }}"
-
-- debug:
-    msg: "{{ item.instance_id }}"
+- name: Terminate EC-2 instances
+  ec2: 
+    state: absent
+    instance_ids: "{{ item.instance_id }}"
   loop: "{{ instances_output.instances }}" 
-
-  # - name: Terminate EC-2 instances
-    #   ec2: 
-    #     state: absent
-    #     instance_ids: 
