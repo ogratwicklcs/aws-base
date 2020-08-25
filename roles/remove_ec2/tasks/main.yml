@@ -11,7 +11,7 @@
 
 - name: Print phone records
   debug:
-    msg: "User {{ item.instance_id }}"
+    msg: "User {{ item.value.instance_id }}"
   loop: "{{ lookup('dict', instances) }}"
 
 
