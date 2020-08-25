@@ -1,0 +1,10 @@
+- name: Running AWS Environment Setup role
+  gather_facts: yes 
+  connection: local
+  hosts: localhost
+  tasks:
+    - include_role:
+        name: remove_ec2
+
+
+ 
