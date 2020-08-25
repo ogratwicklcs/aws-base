@@ -9,6 +9,12 @@
       "tag:Name": application
   register: instances
 
+- name: Print phone records
+  debug:
+    msg: "User {{ item.instance_id }}"
+  loop: "{{ lookup('dict', instances) }}"
+
+
 - name: debug out of instances
   debug:
     msg: "{{ instances[0].instance_id }}" 
