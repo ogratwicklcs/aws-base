@@ -3,7 +3,7 @@
 - name: output ec2 instances that have been provisioning
   ec2:
     count_tag:
-    Name: application
+       - Name: application
   register: instances
     # - name: Terminate EC-2 instances
     #   ec2: 
