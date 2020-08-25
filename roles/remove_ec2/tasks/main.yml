@@ -11,7 +11,7 @@
 
 - name: debug out of instances
   debug:
-    msg: "{{ instances.[instance_id] }}" 
+    msg: "{{ instances.instance_id }}" 
     # - name: Terminate EC-2 instances
     #   ec2: 
     #     state: absent
