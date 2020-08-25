@@ -2,12 +2,12 @@
 
 
 
-- name: Gather information about any instance with a tag key Name and value Example
-  ec2_instance_info:
-    region: us-east-1
-    filters:
-      "tag:Name": application
-  register: instances_output
+# - name: Gather information about any instance with a tag key Name and value Example
+#   ec2_instance_info:
+#     region: us-east-1
+#     filters:
+#       "tag:Name": application
+#   register: instances_output
 
 - copy:
     content: "{{ instances_output }}"
@@ -17,9 +17,9 @@
 #   debug:
 #     msg: "{{ item.instances.value.instance_id }}" 
 #   loop: "{{ lookup('dict', instances_output) }}"
-- name: Print phone records
-  debug:
-    msg: "{{ instances_output.instance_id[0] }}"
+# - name: Print phone records
+#   debug:
+#     msg: "{{ instances_output.instance_id[0] }}"
 
 
 
