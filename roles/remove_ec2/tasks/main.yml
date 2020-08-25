@@ -10,8 +10,8 @@
   register: instances_output
 - name: debug out of instances
   debug:
-    msg: "{{ instances_output.instances.instance_id }}" 
-  
+    msg: "{{ item.value.instance_id }}" 
+  loop: "{{ lookup('dict', instances_output) }}"
 # - name: Print phone records
 #   debug:
 #     msg: "User {{ item.key.instance_id }}"
