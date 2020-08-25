@@ -4,6 +4,7 @@
 
 - name: Gather information about any instance with a tag key Name and value Example
   ec2_instance_info:
+    region: us-east-1
     filters:
       "tag:Name": application
   register: instances
