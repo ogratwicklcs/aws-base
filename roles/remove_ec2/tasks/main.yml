@@ -7,18 +7,18 @@
     region: us-east-1
     filters:
       "tag:Name": application
-  register: instances
-
-- name: Print phone records
-  debug:
-    msg: "User {{ item.key.instance_id }}"
-  loop: "{{ lookup('dict', instances) }}"
-
-
+  register: instances_output
 - name: debug out of instances
   debug:
-    msg: "{{ instances[0].instance_id }}" 
-    # - name: Terminate EC-2 instances
+    msg: "{{ instances_output.instances.imagine_id }}" 
+  
+# - name: Print phone records
+#   debug:
+#     msg: "User {{ item.key.instance_id }}"
+#   loop: "{{ lookup('dict', instances_output) }}"
+
+
+  # - name: Terminate EC-2 instances
     #   ec2: 
     #     state: absent
     #     instance_ids: 
