@@ -8,14 +8,16 @@
     filters:
       "tag:Name": application
   register: instances_output
-- name: debug out of instances
-  debug:
-    msg: "{{ item.instances.value.instance_id }}" 
-  loop: "{{ lookup('dict', instances_output) }}"
-# - name: Print phone records
+
+
+# - name: debug out of instances
 #   debug:
-#     msg: "User {{ item.key.instance_id }}"
+#     msg: "{{ item.instances.value.instance_id }}" 
 #   loop: "{{ lookup('dict', instances_output) }}"
+- name: Print phone records
+  debug:
+    msg: "User {{ instances_output.instances.instance_id.[0] }}"
+
 
 
   # - name: Terminate EC-2 instances
