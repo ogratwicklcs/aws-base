@@ -1,8 +1,8 @@
 - name: Running AWS Environment Setup role
   gather_facts: yes 
   connection: local
-  collections:
-    - amazon.aws
+#   collections:
+#     - amazon.aws
   vars:
     aws_keypair: aws-keypair
     aws_region: us-east-1
@@ -16,3 +16,4 @@
         name: aws_role
 
 
+ 
