@@ -19,7 +19,7 @@
 #     msg: "{{ item.instances.value.instance_id }}" 
 #   loop: "{{ lookup('dict', instances_output) }}"
 - debug:
-    msg: "{{ instances_output.instances[0] }}"
+    msg: "{{ instances_output.instances[0].instance_id }}"
 
 
 
