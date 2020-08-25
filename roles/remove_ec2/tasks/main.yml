@@ -18,4 +18,5 @@
   ec2: 
     state: absent
     instance_ids: "{{ item.instance_id }}"
+    region: us-east-1
   loop: "{{ instances_output.instances }}" 
