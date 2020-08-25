@@ -1,10 +1,11 @@
 ---
 
-- name: output ec2 instances that have been provisioning
-  ec2:
-    region: us-east-1
-    count_tag:
-       - Name: application
+
+
+- name: Gather information about any instance with a tag key Name and value Example
+  ec2_instance_info:
+    filters:
+      "tag:Name": application
   register: instances
     # - name: Terminate EC-2 instances
     #   ec2: 
