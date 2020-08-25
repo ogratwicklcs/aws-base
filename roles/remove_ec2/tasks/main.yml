@@ -16,7 +16,7 @@
 #   loop: "{{ lookup('dict', instances_output) }}"
 - name: Print phone records
   debug:
-    msg: "{{ 'instances_output.instances.instance_id[0]' }}"
+    msg: "{{ instances_output.instances.instance_id[0] }}"
 
 
 
