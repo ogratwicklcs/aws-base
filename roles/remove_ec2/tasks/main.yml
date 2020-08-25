@@ -2,6 +2,7 @@
 
 - name: output ec2 instances that have been provisioning
   ec2:
+    region: us-east-1
     count_tag:
        - Name: application
   register: instances
