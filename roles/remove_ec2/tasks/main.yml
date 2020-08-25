@@ -10,17 +10,16 @@
   register: instances_output
   delegate_to: localhost
 
-- copy:
-    content: "{{ instances_output }}"
-    dest: /home/ansibleadm/output.json
+# - copy:
+#     content: "{{ instances_output }}"
+#     dest: /home/ansibleadm/output.json
 
 # - name: debug out of instances
 #   debug:
 #     msg: "{{ item.instances.value.instance_id }}" 
 #   loop: "{{ lookup('dict', instances_output) }}"
-# - name: Print phone records
-#   debug:
-#     msg: "{{ instances_output.instance_id[0] }}"
+- debug:
+    msg: "{{ instances_output.instances[0]"
 
 
 
